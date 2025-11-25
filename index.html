@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Examzy Privacy Policy - Secure offline exam distribution app">
+    <title>Privacy Policy - Examzy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        header {
+            background: #584BB7;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin: -20px -20px 30px -20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .meta {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        h2 {
+            color: #584BB7;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #584BB7;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        p, li {
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            background: #FFF3CD;
+            border-left: 4px solid #FFC107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .important {
+            background: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .contact {
+            background: #F1F8E9;
+            border: 2px solid #8BC34A;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+        
+        a {
+            color: #584BB7;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <div class="meta">
+                <strong>Examzy - Secure Offline Exams</strong><br>
+                Effective Date: November 25, 2025<br>
+                Last Updated: November 25, 2025<br>
+                App Version: 1.0.0
+            </div>
+        </header>
+        <h2>1. Introduction</h2>
+        <p>Examzy ("App") is an offline exam distribution application that enables teachers to securely share encrypted exam packages with nearby students using Bluetooth/Local Network and QR code technology. This privacy policy explains our practices regarding data collection and usage.</p>
+        <div class="highlight">
+            <strong>Key Points:</strong>
+            <ul>
+                <li>✓ Exam data stays on your device (not uploaded to servers)</li>
+                <li>✓ Ads are optional (purchase "Remove Ads" to disable)</li>
+                <li>✓ Analytics are opt-in (disabled by default)</li>
+                <li>✓ You can delete all data anytime via Settings</li>
+                <li>✓ We comply with GDPR, CCPA, COPPA, and FERPA</li>
+            </ul>
+        </div>
+        <h2>2. Data We DO NOT Collect</h2>
+        <p>Examzy does <strong>NOT</strong> collect, store, or transmit the following by default:</p>
+        <ul>
+            <li>Personal identification numbers (ID, SSN, passport)</li>
+            <li>Phone numbers</li>
+            <li>Email addresses</li>
+            <li>Precise GPS location data</li>
+            <li>Student names (unless optionally added by teacher)</li>
+        </ul>
+        <h2>3. Data Stored Locally</h2>
+        <p>All exam content and student responses are stored <strong>exclusively on individual devices</strong>:</p>
+        <ul>
+            <li><strong>Teacher devices:</strong> Exam drafts and collected student results</li>
+            <li><strong>Student devices:</strong> Exam questions and submitted responses</li>
+            <li><strong>No upload:</strong> No exam data is uploaded to remote servers</li>
+        </ul>
+        <h2>4. Encryption</h2>
+        <p>All exam data transmitted between devices is encrypted using:</p>
+        <ul>
+            <li>AES-256-GCM encryption</li>
+            <li>Teacher-specified 4-digit pass-code key derivation</li>
+            <li>PBKDF2-HMAC-SHA256 (100,000 iterations)</li>
+            <li>Random salts for each exam session</li>
+        </ul>
+        <p>QR codes display only encrypted ciphertext, not exam content.</p>
+        <h2>5. Data Retention</h2>
+        <ul>
+            <li>Student results auto-delete after 30 days from collection</li>
+            <li>Teachers can export results before auto-deletion</li>
+            <li>Users can manually delete all stored data at any time via app settings</li>
+        </ul>
+        <h2>6. Permissions Usage</h2>
+        <p>The following permissions are requested only when explicitly needed:</p>
+        <ul>
+            <li><strong>Camera:</strong> Used only when student taps "Scan QR Code" - images never uploaded</li>
+            <li><strong>Bluetooth/Local Network:</strong> Used only when teacher taps "Share Exam"</li>
+            <li><strong>Location:</strong> Required for Bluetooth discovery; not used for tracking or storage</li>
+            <li><strong>Notifications:</strong> Used for exam sharing status updates (optional)</li>
+        </ul>
+        <h2>7. Analytics & Crash Reporting</h2>
+        <ul>
+            <li>Firebase Analytics is <strong>disabled by default</strong></li>
+            <li>Users must <strong>opt-in</strong> to enable analytics via consent dialog</li>
+            <li>No personally identifiable information is collected through analytics</li>
+            <li>Analytics data includes: app usage patterns, feature interactions, crash reports</li>
+            <li>Crash reports are scrubbed of user data before transmission</li>
+        </ul>
+        <h2>8. Advertising & Third-Party Services</h2>
+        <p>Examzy displays advertisements through Google AdMob to support free access to the app.</p>
+        <h3>Data Collected by Google AdMob:</h3>
+        <ul>
+            <li>Advertising ID (IDFA on iOS, AAID on Android)</li>
+            <li>Device information (model, OS version, screen size, manufacturer)</li>
+            <li>IP address (used to determine approximate location)</li>
+            <li>App usage data (session duration, interactions, crashes)</li>
+            <li>Ad interaction data (ad views, clicks, impressions)</li>
+        </ul>
+        <h3>Personalized Ads:</h3>
+        <ul>
+            <li>On first launch, you will be asked for consent to show personalized ads</li>
+            <li>Personalized ads use your Advertising ID to show relevant advertisements</li>
+            <li>You can opt-out at any time through:
+                <ul>
+                    <li><strong>iOS:</strong> Settings > Privacy & Security > Tracking > Examzy (toggle off)</li>
+                    <li><strong>Android:</strong> Settings > Google > Ads > Opt out of Ads Personalization</li>
+                    <li><strong>In-App:</strong> Purchase "Remove Ads" to disable all advertisements</li>
+                </ul>
+            </li>
+            <li>If you decline consent, you will see non-personalized (contextual) ads instead</li>
+        </ul>
+        <div class="important">
+            <strong>Third-Party Links:</strong>
+            <ul>
+                <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                <li><a href="https://policies.google.com/technologies/ads" target="_blank">Google Ads Privacy</a></li>
+                <li><a href="https://support.google.com/admob/answer/9012903" target="_blank">AdMob Partners</a></li>
+            </ul>
+        </div>
+        <h2>9. Your Privacy Rights</h2>
+        <h3>GDPR (European Union):</h3>
+        <p>If you are located in the EEA, UK, or Switzerland, you have:</p>
+        <ul>
+            <li>Right to access your data</li>
+            <li>Right to rectification (correction of inaccurate data)</li>
+            <li>Right to erasure ("right to be forgotten")</li>
+            <li>Right to restrict processing</li>
+            <li>Right to data portability</li>
+            <li>Right to object to processing</li>
+            <li>Right to withdraw consent at any time</li>
+            <li>Right to lodge a complaint with a supervisory authority</li>
+        </ul>
+        <h3>CCPA (California):</h3>
+        <p>If you are a California resident, you have:</p>
+        <ul>
+            <li>Right to know what personal information is collected</li>
+            <li>Right to know if personal information is sold or shared</li>
+            <li>Right to delete personal information</li>
+            <li>Right to opt-out of sale/sharing of personal information</li>
+            <li>Right to non-discrimination for exercising your rights</li>
+        </ul>
+        <p><strong>We do NOT sell your personal information to third parties.</strong></p>
+        <h3>To Exercise Your Rights:</h3>
+        <ul>
+            <li><strong>Data deletion:</strong> Use "Delete All Data" in Settings > Privacy</li>
+            <li><strong>Ad opt-out:</strong> Adjust device settings or purchase "Remove Ads"</li>
+            <li><strong>Access/correction requests:</strong> Contact us at the email below</li>
+        </ul>
+        <h2>10. Children's Privacy (COPPA Compliance)</h2>
+        <p>Examzy is intended for educational use in school settings under teacher supervision.</p>
+        <ul>
+            <li>We do not knowingly collect personal information from children under 13 without verifiable parental consent</li>
+            <li>Schools using this app must obtain appropriate parental consent per COPPA and FERPA requirements</li>
+            <li>Teachers are responsible for ensuring compliance with local education privacy laws</li>
+        </ul>
+        <h3>Parental Rights:</h3>
+        <p>Parents/guardians can:</p>
+        <ul>
+            <li>Review data stored on their child's device at any time</li>
+            <li>Request deletion of data via "Delete All Data" in Settings</li>
+            <li>Refuse further data collection by uninstalling the app</li>
+            <li>Contact us to request information about data practices</li>
+        </ul>
+        <h2>11. Third-Party Services Summary</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 15px 0;">
+            <tr style="background: #f0f0f0;">
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Service</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Purpose</th>
+                <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Data Collected</th>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Firebase (Google)</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Analytics (opt-in), Crash Reporting</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">App usage, crash logs (anonymized)</td>
+            </tr>
+            <tr>
+                <td style="padding: 10px; border: 1px solid #ddd;">Google AdMob</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Advertisement display</td>
+                <td style="padding: 10px; border: 1px solid #ddd;">Advertising ID, device info, IP address</td>
+            </tr>
+        </table>
+        <p><strong>Note:</strong> No student exam data or teacher-created content is shared with any third-party services.</p>
+        <h2>12. Data Security</h2>
+        <p>We implement the following security measures:</p>
+        <ul>
+            <li>Exam content encrypted at rest using AES-256</li>
+            <li>Device-to-device communication uses encrypted channels</li>
+            <li>No debug endpoints or hardcoded keys in release builds</li>
+            <li>Regular static analysis for security vulnerabilities</li>
+            <li>Secure storage for encryption keys using platform keychains</li>
+        </ul>
+        <h2>13. Changes to This Policy</h2>
+        <p>We may update this privacy policy periodically to reflect:</p>
+        <ul>
+            <li>Changes in legal requirements</li>
+            <li>New features or services</li>
+            <li>Improvements to data practices</li>
+        </ul>
+        <p>Continued use of the app after changes constitutes acceptance of the updated policy. We will notify users of material changes via in-app notification.</p>
+        <h2>14. Your Choices</h2>
+        <p>You have control over your data:</p>
+        <ul>
+            <li><strong>Disable analytics:</strong> Settings > Privacy > Analytics (toggle off)</li>
+            <li><strong>Disable personalized ads:</strong> Device settings or purchase "Remove Ads"</li>
+            <li><strong>Delete all data:</strong> Settings > Privacy > Delete All Data</li>
+            <li><strong>Uninstall app:</strong> Removes all local data permanently</li>
+        </ul>
+        <div class="contact">
+            <h2>15. Contact Information</h2>
+            <p>For privacy concerns, data deletion requests, GDPR/CCPA inquiries, or questions about this policy:</p>
+            <p><strong>Email:</strong> <a href="mailto:support@examzy.app">support@examzy.app</a><br>
+            <strong>Subject Line:</strong> "Examzy Privacy Request"</p>
+            <p>Please include:</p>
+            <ul>
+                <li>Your device type (iOS/Android)</li>
+                <li>App version (found in Settings > About)</li>
+                <li>Nature of your request</li>
+            </ul>
+            <p>We will respond to all inquiries within 30 days.</p>
+        </div>
+        <h2>16. Legal Compliance</h2>
+        <p>For the full text of applicable regulations:</p>
+        <ul>
+            <li><a href="https://gdpr.eu/" target="_blank">GDPR (General Data Protection Regulation)</a></li>
+            <li><a href="https://oag.ca.gov/privacy/ccpa" target="_blank">CCPA (California Consumer Privacy Act)</a></li>
+            <li><a href="https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/childrens-online-privacy-protection-rule" target="_blank">COPPA (Children's Online Privacy Protection)</a></li>
+            <li><a href="https://www2.ed.gov/policy/gen/guid/fpco/ferpa/index.html" target="_blank">FERPA (Family Educational Rights and Privacy Act)</a></li>
+        </ul>
+        <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+        <p style="text-align: center; color: #666; font-size: 0.9em;">
+            © 2025 Examzy. All rights reserved.<br>
+            Last updated: November 25, 2025
+        </p>
+    </div>
+</body>
+</html>
