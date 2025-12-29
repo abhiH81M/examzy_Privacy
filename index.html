@@ -3,263 +3,436 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Examzy</title>
+    <title>Examzy - Privacy Policy</title>
     <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --success: #22c55e;
+            --warning: #f59e0b;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
             padding: 20px;
         }
+        
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
-        h1 {
-            color: #584BB7;
-            font-size: 2.5em;
-            margin-bottom: 10px;
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
         }
-        .last-updated {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #f0f0f0;
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
+        
+        .subtitle {
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+        
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            background: var(--card-bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        
+        section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+        
         h2 {
-            color: #584BB7;
-            font-size: 1.8em;
-            margin-top: 40px;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            margin: 20px 0 12px 0;
+        }
+        
+        p {
+            color: var(--text-muted);
             margin-bottom: 15px;
         }
-        h3 {
-            color: #764ba2;
-            font-size: 1.3em;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
-        p,
-        li {
-            margin-bottom: 12px;
-            color: #555;
-        }
+        
         ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
+            list-style: none;
+            padding-left: 0;
         }
+        
+        li {
+            color: var(--text-muted);
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 8px;
+        }
+        
         .highlight-box {
-            background: #f8f9ff;
-            border-left: 4px solid #584BB7;
-            padding: 20px;
-            margin: 20px 0;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
             border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
         }
-        .contact-section {
-            background: #f0f0f0;
-            padding: 25px;
+        
+        .highlight-box.success {
+            background: rgba(34, 197, 94, 0.1);
+            border-color: rgba(34, 197, 94, 0.3);
+        }
+        
+        .highlight-box.warning {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 4px 12px;
             border-radius: 12px;
-            margin-top: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 8px;
         }
-        a {
-            color: #584BB7;
+        
+        .badge.eu { background: #3b82f6; }
+        .badge.us { background: #ef4444; }
+        
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .right-item {
+            background: rgba(255,255,255,0.05);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .right-item::before {
+            content: "✓ ";
+            color: var(--success);
+        }
+        
+        .services-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .service-item {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+        }
+        
+        .service-item h4 {
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        
+        .service-item p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .service-item a {
+            color: var(--primary);
             text-decoration: none;
+            font-size: 0.85rem;
         }
-        a:hover {
+        
+        .service-item a:hover {
             text-decoration: underline;
         }
-        .app-name {
-            font-weight: 600;
-            color: #584BB7;
+        
+        .controls-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
         }
-        @media (max-width: 768px) {
-            .container {
-                padding: 25px;
+        
+        .control-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+        }
+        
+        .control-item .icon {
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 16px;
+            transition: background 0.3s;
+        }
+        
+        .contact-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        @media (max-width: 600px) {
+            .meta {
+                flex-direction: column;
+                gap: 10px;
             }
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
+            
+            section {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated"><strong>Effective Date:</strong> December 15, 2025</p>
-        <p>Welcome to <span class="app-name">Examzy</span>. We are committed to protecting your privacy and being
-            transparent about how we handle your data. This Privacy Policy explains what information we collect, how we
-            use it, and your rights regarding your data.</p>
-        <h2>1. Overview</h2>
-        <p><span class="app-name">Examzy</span> is a fully offline exam and quiz management application designed for
-            teachers and students. We prioritize privacy and minimize data collection.</p>
-        <div class="highlight-box">
-            <h3>Key Privacy Points:</h3>
+        <header>
+            <div class="logo">Examzy</div>
+            <p class="subtitle">Privacy Policy</p>
+            <div class="meta">
+                <span class="meta-item">📅 Effective: November 25, 2025</span>
+                <span class="meta-item">🔄 Updated: December 29, 2025</span>
+                <span class="meta-item">📱 Version: 3.3.0</span>
+            </div>
+        </header>
+        <section>
+            <h2>📱 Data Stored Locally (On Your Device)</h2>
+            <p>The following data is stored <strong>only on your device</strong> and is never uploaded to our servers:</p>
             <ul>
-                <li><strong>Local Storage:</strong> All exam data, attendance records, and student information are
-                    stored locally on your device</li>
-                <li><strong>No Cloud Sync:</strong> We do not upload or sync your data to any servers</li>
-                <li><strong>Third-Party Ads:</strong> Free version includes ads that may collect data for
-                    personalization</li>
-                <li><strong>Privacy Control:</strong> Purchase premium to remove all ads and ad tracking</li>
+                <li>Exam questions and answers you create</li>
+                <li>Student results and scores</li>
+                <li>Class and attendance records</li>
+                <li>App preferences and settings</li>
             </ul>
-        </div>
-        <h2>2. Information We Collect</h2>
-        <h3>2.1 Information You Provide</h3>
-        <p>When you use <span class="app-name">Examzy</span>, you may provide:</p>
-        <ul>
-            <li><strong>User Type:</strong> Teacher or Student designation</li>
-            <li><strong>Name:</strong> For identification within the app (optional, stored locally)</li>
-            <li><strong>Exam Content:</strong> Questions, answers, exam titles, and quiz data (stored locally)</li>
-            <li><strong>Student Data:</strong> Names, roll numbers, attendance, and exam results (stored locally by
-                teachers)</li>
-        </ul>
-        <p><strong>Important:</strong> All this information is stored only on your device. We do not have access to it.
-        </p>
-        <h3>2.2 Automatically Collected Information</h3>
-        <h4>a) Third-Party Advertising Data (Free Version Only)</h4>
-        <p>If you use the free version of <span class="app-name">Examzy</span>, we display advertisements through Google
-            Mobile Ads. Our advertising partner may collect:</p>
-        <ul>
-            <li>Device identifiers (Advertising ID)</li>
-            <li>IP address</li>
-            <li>Device type and operating system</li>
-            <li>App usage data (time spent, interactions)</li>
-            <li>Location data (approximate, based on IP)</li>
-            <li>Ad interaction data (clicks, views)</li>
-        </ul>
-        <p><strong>Purpose:</strong> To display personalized advertisements and measure ad performance.</p>
-        <p><strong>Third-Party Policy:</strong> Google's data collection is governed by their <a
-                href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.</p>
-        <h4>b) Analytics Data (Optional)</h4>
-        <p>With your consent, we may collect anonymous analytics data including:</p>
-        <ul>
-            <li>App crashes and errors</li>
-            <li>Feature usage statistics</li>
-            <li>Device information (model, OS version)</li>
-            <li>Session duration</li>
-        </ul>
-        <p><strong>Purpose:</strong> To improve app stability and user experience.</p>
-        <p><strong>Control:</strong> You can opt-out of analytics in the app settings.</p>
-        <h2>3. How We Use Your Information</h2>
-        <h3>3.1 Local Data (Exams, Attendance, Student Records)</h3>
-        <ul>
-            <li><strong>Exam Management:</strong> Create, store, and share exams locally via QR codes or nearby
-                connections</li>
-            <li><strong>Attendance Tracking:</strong> Record and export attendance reports</li>
-            <li><strong>Results Processing:</strong> Calculate scores and generate result reports</li>
-        </ul>
-        <p>We never access, process, or transmit this data to any server.</p>
-        <h3>3.2 Advertising Data</h3>
-        <ul>
-            <li>Display relevant advertisements (free version only)</li>
-            <li>Improve ad targeting and relevance</li>
-            <li>Measure advertising effectiveness</li>
-        </ul>
-        <h3>3.3 Analytics Data</h3>
-        <ul>
-            <li>Fix bugs and crashes</li>
-            <li>Understand feature usage</li>
-            <li>Improve app performance</li>
-        </ul>
-        <h2>4. Data Sharing and Disclosure</h2>
-        <h3>4.1 No Sale of Personal Data</h3>
-        <p>We do not sell, rent, or trade your personal information to third parties.</p>
-        <h3>4.2 Third-Party Service Providers</h3>
-        <p>We work with the following third-party services:</p>
-        <ul>
-            <li><strong>Google Mobile Ads:</strong> Displays advertisements in the free version (<a
-                    href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>)</li>
-            <li><strong>Analytics Services:</strong> If you opt-in, anonymized usage data for app improvement</li>
-        </ul>
-        <h3>4.3 Legal Requirements</h3>
-        <p>We may disclose information if required by law or to:</p>
-        <ul>
-            <li>Comply with legal processes</li>
-            <li>Protect our rights and safety</li>
-            <li>Prevent fraud or abuse</li>
-        </ul>
-        <h2>5. Your Data Rights and Choices</h2>
-        <h3>5.1 Remove Ads and Ad Tracking</h3>
-        <p><strong>Purchase Examzy Premium</strong> to completely remove advertisements and all associated ad tracking.
-            Premium users do not have any data collected by advertising networks.</p>
-        <h3>5.2 Opt-Out of Analytics</h3>
-        <p>Disable analytics collection in the app settings at any time.</p>
-        <h3>5.3 Advertising Choices</h3>
-        <p>You can limit ad tracking on your device:</p>
-        <ul>
-            <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
-            <li><strong>iOS:</strong> Settings → Privacy → Tracking → Disable "Allow Apps to Request to Track"</li>
-        </ul>
-        <h3>5.4 Delete Your Data</h3>
-        <p>All exam data, attendance, and student information is stored locally on your device. To delete:</p>
-        <ul>
-            <li>Use the in-app "Delete All Data" option in settings, or</li>
-            <li>Uninstall the app to remove all local data</li>
-        </ul>
-        <p>Note: This action is irreversible as we do not maintain backups.</p>
-        <h2>6. Data Security</h2>
-        <p>We implement security measures to protect your data:</p>
-        <ul>
-            <li><strong>Local Storage:</strong> All exam and student data stays on your device</li>
-            <li><strong>No Cloud Transmission:</strong> Data is never uploaded to external servers</li>
-            <li><strong>Secure Connections:</strong> Nearby connections use encryption for local data sharing</li>
-        </ul>
-        <p><strong>Your Responsibility:</strong> Protect your device with a passcode/biometric lock to prevent
-            unauthorized access to app data.</p>
-        <h2>7. Children's Privacy</h2>
-        <p><span class="app-name">Examzy</span> is designed for educational use by students of all ages, including
-            children under 13/16.</p>
-        <div class="highlight-box">
-            <h3>Important for Parents and Teachers:</h3>
+            <div class="highlight-box success">
+                <strong>✓ Your exam data stays private.</strong> We don't have access to your exams or student information.
+            </div>
+        </section>
+        <section>
+            <h2>📊 Advertising Data (Free Version Only)</h2>
+            <p>Our free version displays advertisements served by <strong>Google AdMob</strong>. AdMob and its advertising partners may collect:</p>
             <ul>
-                <li><strong>No Data Collection from Children:</strong> We do not knowingly collect personal information
-                    from children</li>
-                <li><strong>Local Data Only:</strong> Student names and results entered by teachers are stored locally,
-                    never transmitted</li>
-                <li><strong>Ad-Free Recommendation:</strong> We recommend schools and parents use the Premium version to
-                    eliminate all advertising and tracking</li>
+                <li>Device advertising identifier (GAID on Android, IDFA on iOS)</li>
+                <li>IP address and approximate location (country/region level)</li>
+                <li>Device information (model, operating system version)</li>
+                <li>App usage information for ad relevance</li>
             </ul>
-        </div>
-        <h2>8. International Users</h2>
-        <p>Your data is processed on your device only. If you use advertising features, data may be processed by Google
-            in accordance with their international data transfer policies.</p>
-        <h2>9. Updates to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Changes will be posted in the app and on this page with
-            an updated effective date. Continued use of the app after changes constitutes acceptance of the updated
-            policy.</p>
-        <h2>10. Additional Resources</h2>
-        <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-            <li><a href="https://support.google.com/admob/answer/6128543" target="_blank">Google AdMob Privacy
-                    Information</a></li>
-            <li><a href="https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy" target="_blank">COPPA
-                    (Children's Privacy) Information</a></li>
-        </ul>
-        <div class="contact-section">
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data:</p>
-            <p><strong>Email:</strong> <a href="mailto:privacy@examzy.app">privacy@examzy.app</a></p>
-            <p><strong>App Settings:</strong> Use the "Contact Support" option in the app</p>
-            <p>We will respond to your inquiry within 30 days.</p>
-        </div>
-        <hr style="margin: 40px 0; border: none; border-top: 2px solid #f0f0f0;">
-        <p style="text-align: center; color: #999; font-size: 0.9em;">
-            © 2025 Examzy. All rights reserved.
-        </p>
+            
+            <h3>Managing Ad Preferences</h3>
+            <ul>
+                <li><strong>EU/EEA/UK/California users:</strong> You'll see a consent dialog when you first open the app</li>
+                <li><strong>Device settings:</strong> Settings → Privacy → Advertising → Limit Ad Tracking</li>
+                <li><strong>Premium purchase:</strong> Removes all ads and stops ad-related data collection</li>
+            </ul>
+            
+            <div class="highlight-box">
+                <strong>💎 Premium users:</strong> No advertisements, no ad-related data collection.
+            </div>
+        </section>
+        <section>
+            <h2>📈 Analytics Data (Opt-in Only)</h2>
+            <p>If you choose to enable analytics, <strong>Firebase Analytics</strong> collects:</p>
+            <ul>
+                <li>Screen views and navigation patterns</li>
+                <li>Feature usage statistics</li>
+                <li>App performance metrics</li>
+                <li>Crash reports for stability improvements</li>
+            </ul>
+            
+            <div class="highlight-box warning">
+                <strong>Important:</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Analytics is <strong>disabled by default</strong></li>
+                    <li>Analytics is <strong>never enabled for student accounts</strong></li>
+                    <li>You can disable it anytime in Settings</li>
+                    <li>No personally identifiable information is collected</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>🇪🇺 Your Rights - EU/EEA/UK Users (GDPR)</h2>
+            <p>Under the General Data Protection Regulation, you have the following rights:</p>
+            <div class="rights-grid">
+                <div class="right-item">Access your data</div>
+                <div class="right-item">Correct inaccurate data</div>
+                <div class="right-item">Delete your data</div>
+                <div class="right-item">Restrict processing</div>
+                <div class="right-item">Data portability</div>
+                <div class="right-item">Object to processing</div>
+                <div class="right-item">Withdraw consent</div>
+            </div>
+            <p style="margin-top: 16px;">To exercise these rights, contact us using the information below.</p>
+        </section>
+        <section>
+            <h2>🇺🇸 Your Rights - California Residents (CCPA)</h2>
+            <p>Under the California Consumer Privacy Act, you have the right to:</p>
+            <ul>
+                <li>Know what personal information is collected about you</li>
+                <li>Know if your personal information is sold or disclosed and to whom</li>
+                <li>Say no to the sale of personal information</li>
+                <li>Access your personal information</li>
+                <li>Receive equal service and price, even after exercising privacy rights</li>
+            </ul>
+            <div class="highlight-box success">
+                <strong>We do NOT sell your personal information.</strong>
+            </div>
+        </section>
+        <section>
+            <h2>🔗 Third-Party Services</h2>
+            <p>Our app uses the following third-party services, each with their own privacy policies:</p>
+            <div class="services-list">
+                <div class="service-item">
+                    <h4>Google AdMob</h4>
+                    <p>Advertising services for free version</p>
+                    <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy →</a>
+                </div>
+                <div class="service-item">
+                    <h4>Firebase Analytics</h4>
+                    <p>Anonymous usage analytics (opt-in)</p>
+                    <a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Policy →</a>
+                </div>
+                <div class="service-item">
+                    <h4>Google Play Services</h4>
+                    <p>In-app purchases and licensing</p>
+                    <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy →</a>
+                </div>
+                <div class="service-item">
+                    <h4>Nearby Connections API</h4>
+                    <p>Peer-to-peer exam sharing</p>
+                    <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy →</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>🎛️ Your Controls</h2>
+            <p>You have full control over your data:</p>
+            <div class="controls-grid">
+                <div class="control-item">
+                    <span class="icon">📊</span>
+                    <span>Toggle analytics in Settings</span>
+                </div>
+                <div class="control-item">
+                    <span class="icon">💎</span>
+                    <span>Buy Premium to remove ads</span>
+                </div>
+                <div class="control-item">
+                    <span class="icon">🗑️</span>
+                    <span>Delete local data in Settings</span>
+                </div>
+                <div class="control-item">
+                    <span class="icon">📱</span>
+                    <span>Manage ad preferences on device</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>👶 Children's Privacy</h2>
+            <p>Examzy is designed for educational use and may be used by students of all ages under teacher supervision. We do not knowingly collect personal information from children under 13.</p>
+            <ul>
+                <li>Student accounts have analytics permanently disabled</li>
+                <li>Exam data is stored locally, not on our servers</li>
+                <li>No student PII is transmitted or collected</li>
+            </ul>
+        </section>
+        <section>
+            <h2>🔄 Policy Updates</h2>
+            <p>We may update this privacy policy from time to time. When we make significant changes:</p>
+            <ul>
+                <li>We will update the "Last Updated" date at the top</li>
+                <li>For material changes, we may notify you in the app</li>
+                <li>Continued use of the app constitutes acceptance of updates</li>
+            </ul>
+        </section>
+        <footer>
+            <h2 style="color: var(--text); margin-bottom: 16px;">📧 Contact Us</h2>
+            <p>For privacy-related questions or to exercise your rights:</p>
+            <a href="mailto:abhilashpotluri445@gmail.com?subject=Examzy%20Privacy%20Request" class="contact-btn">
+                Contact Privacy Team
+            </a>
+            <p style="margin-top: 24px; font-size: 0.9rem;">
+                Email: abhilashpotluri445@gmail.com<br>
+                Subject: "Examzy Privacy Request"
+            </p>
+            <p style="margin-top: 32px; color: var(--text-muted); font-size: 0.85rem;">
+                © 2025 Examzy. All rights reserved.
+            </p>
+        </footer>
     </div>
 </body>
 </html>
