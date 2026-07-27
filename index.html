@@ -160,22 +160,22 @@
             <header>
                 <div class="eyebrow">Legal Document</div>
                 <h1>Privacy Policy</h1>
-                <p>Exam Maker: Offline Tests respects your privacy. The short version is simple: your exam data never leaves your device.</p>
+                <p>Exam Maker: Offline Tests respects your privacy. Local data stays on your device; Online Classroom uses Firebase for the cloud session described below.</p>
             </header>
 
             <main>
                 <div class="meta">
-                    <div><strong>Last Updated:</strong> Jul 1, 2026</div>
+                    <div><strong>Last Updated:</strong> Jul 18, 2026</div>
                     <div><strong>Effective:</strong> Nov 25, 2025</div>
-                    <div><strong>Version:</strong> v3.5.0</div>
+                    <div><strong>Version:</strong> v3.6.0</div>
                 </div>
 
                 <p><strong>We respect your privacy.</strong></p>
-                <p>This policy explains, in simple words, what Exam Maker: Offline Tests stores and why. Short version: your exam data stays on your device.</p>
+                <p>This policy explains, in simple words, what Exam Maker: Offline Tests stores and why. Local drafts and settings stay on your device. Online Classroom uses Firebase to run the cloud session described below.</p>
 
                 <h2>01 - Local Data</h2>
-                <h3>Data stored only on your device</h3>
-                <p>The app stores the following on your device only:</p>
+                <h3>Local and online classroom data</h3>
+                <p>The app stores the following on your device:</p>
                 <ul>
                     <li>Exam questions and answers you create</li>
                     <li>Saved drafts and local exam progress</li>
@@ -184,7 +184,10 @@
                     <li>App preferences and settings</li>
                     <li>Profile details you enter such as name, roll number, and age range</li>
                 </ul>
-                <p>We do not run user accounts or a server that stores your exam data. We do not have a cloud copy of your exams, results, or student details.</p>
+                <p>Online Classroom (Beta, currently limited to 100 students per session) is different. To let a teacher and students connect over the internet, the app uses Firebase Authentication and Cloud Firestore. Google Login is required for teachers to manage their sessions across devices and support future subscription plans. When teachers use Google Login, the app receives basic profile information needed to create and verify their account.</p>
+                <p>Students do not need to create permanent accounts. They participate seamlessly using a session identifier. To process and deliver results, these student identifiers and their exam interactions are securely maintained under the hosting teacher's account. The app processes this identifier, the participant name and roll number entered for that session, encrypted question data, submitted answer selections, session timing, and release status. If a student later decides to host their own exams, they simply create a teacher account.</p>
+                <p>Online question papers are encrypted with a unique AES-256-GCM key before upload. The teacher keeps the paper key and correct-answer map in secure local storage until the scheduled release. Submitted participants can receive the released answers to calculate results locally; participants who do not submit cannot read them.</p>
+                <p>Online Classroom data is retained for the free session period and expires 24 hours after the submission grace period. The teacher app removes expired session data when the teacher next opens the app. If a teacher never returns, an abandoned session can remain until that cleanup occurs.</p>
 
                 <h2>02 - Advertising</h2>
                 <h3>Advertising data (free version only)</h3>
@@ -223,17 +226,18 @@
                 <ul>
                     <li><strong>Google AdMob</strong> - Advertising (free version)</li>
                     <li><strong>Google Firebase Analytics</strong> - Aggregated app behavior, screen views, and product funnels</li>
+                    <li><strong>Google Firebase Authentication and Cloud Firestore</strong> - Online Classroom identity and encrypted cloud session data</li>
+                    <li><strong>Google Sign-In and Sign in with Apple</strong> - Optional teacher sign-in for Online Classroom</li>
                     <li><strong>Google Play Services</strong> - In-app purchases and licensing</li>
-                    <li><strong>Nearby Connections</strong> - Peer-to-peer exam sharing on supported devices</li>
                 </ul>
-                <p>Nearby sharing is device-to-device and depends on local connection availability and platform limits. If many students submit results at the same time, transfers may complete over multiple connection cycles instead of all at once.</p>
                 <h3>Service reliability and limitation of liability</h3>
-                <p>Exam Maker: Offline Tests operates using local offline peer-to-peer connections. The stability of these connections depends on device hardware, operating system behavior, and the surrounding environment.</p>
-                <p>The service is provided "as is" and is intended for casual classroom assessments such as daily quizzes, review activities, polls, and practice tests. The developers are not liable for dropped connections, delayed transfers, local data loss, or consequences arising from using the app for high-stakes, official, grade-deciding, or standardized examinations.</p>
+                <p>Exam Maker: Offline Tests supports Online Classroom internet sessions (currently in Beta). The stability of these connections depends on device hardware, operating system behavior, network availability, and the surrounding environment.</p>
+                <p>The service is provided "as is" and is intended for casual classroom assessments such as daily quizzes, review activities, polls, and practice tests. The Online Classroom feature is a "Beta" service and provided without warranties of any kind. The developers are not liable for dropped connections, delayed transfers, cloud data loss, local data loss, service interruptions, or consequences arising from using the app for high-stakes, official, grade-deciding, or standardized examinations.</p>
+                <p>Anyone who scans a session QR code or receives a session link can join an Online Classroom session. The developers have no control over unauthorized access if session credentials are shared (e.g., via photos or messaging apps). It is the teacher's responsibility to share QR codes and session IDs only with intended participants. The developers are not liable for unauthorized participants joining a session.</p>
 
                 <h2>04 - Data Removal</h2>
-                <h3>No server-side deletion workflow</h3>
-                <p>Because we do not store your exam data on our servers, there is no server-side account deletion or export process.</p>
+                <h3>Local deletion and online-session retention</h3>
+                <p>Most exam data is local. For Online Classroom, the teacher app deletes expired cloud sessions when the teacher next opens the app, as described above. We do not offer a separate cloud-data export workflow.</p>
                 <p>To remove local app data, clear the app storage, use the in-app delete-data tools where available, or uninstall the app from your device.</p>
                 <h2>05 - Controls</h2>
                 <h3>Device-based controls only</h3>
@@ -242,10 +246,11 @@
                     <li>Edit the saved age range from app settings</li>
                     <li>Review analytics consent and ad privacy options from app settings</li>
                     <li>Clear app data or uninstall the app from your device</li>
+                    <li>Avoid creating or joining an Online Classroom session if you do not want its session details processed by Firebase</li>
                 </ul>
                 <h2>06 - Children</h2>
                 <h3>Children's privacy</h3>
-                <p>Exam Maker: Offline Tests is intended for users ages 12 and up. The app does not request child-directed ads. For ad handling, the available age settings are 13-17 and 18+. Analytics follows the same regional consent rules and remains off until allowed where required. Exam data is stored locally, and we do not send student exam answers or results to our own servers.</p>
+                <p>Exam Maker: Offline Tests is intended for users ages 12 and up. The app does not request child-directed ads. For ad handling, the available age settings are 13-17 and 18+. Analytics follows the same regional consent rules and remains off until allowed where required. Local data is stored locally. Online Classroom processes only the session data described above so classmates can participate together.</p>
 
                 <h2>07 - Updates</h2>
                 <h3>Policy updates</h3>
